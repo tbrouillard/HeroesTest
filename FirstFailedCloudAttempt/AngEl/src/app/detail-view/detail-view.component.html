@@ -1,0 +1,22 @@
+<h2 style="padding-left: 20px">Hero</h2>
+<Table style="padding-left: 60px">
+  <tr><th>Rank: </th><td *ngIf="hero.rank != unranked(); else elseBlock">{{hero.rank}}</td></tr>
+  <tr><th>Hero Name: </th><td>{{hero.alias}}</td></tr>
+  <tr><th>Hero ID: </th><td>{{hero.heroID}}</td></tr>
+  <tr><th>Name: </th><td>{{hero.name}}</td></tr>
+  <tr><th>Quirk: </th><td>{{hero.quirk}}</td></tr>
+  <tr>
+    <td style="text-align: right;">
+      <button routerLink="/edit/{{hero.reference}}" style="width: 50%">
+        Edit
+      </button>
+    </td>
+    <td style="text-align: left;">
+      <button routerLink="" (click)="delete()" style="width: 50%">
+        Delete
+      </button>
+    </td>
+  </tr>
+</Table>
+
+<ng-template #elseBlock>N/A</ng-template>

@@ -1,0 +1,8 @@
+th {
+  font-weight: bolder;
+  text-align: right;
+}
+
+td, th {
+  width: 150px
+} 

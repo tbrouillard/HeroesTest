@@ -92,11 +92,12 @@ export class ESHeroService {
       host: {
         host: this.DBURL,
         port: this.DBPORT,
-        // headers: {
-        //   'Access-Control-Allow-Origin': "*"
-        // }
+        headers: {
+          'Access-Control-Allow-Origin': "*"
+        }
       },
-      // httpAuth: this.uname + ":" + this.pword,
+      // port: this.DBPORT,
+      httpAuth: this.uname + ":" + this.pword,
       log: 'trace'
     });
     // TODO IF INDECIS DONT EXIST CREATE THEM AND INIT META DATA

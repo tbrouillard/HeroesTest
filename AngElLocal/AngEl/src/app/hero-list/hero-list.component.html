@@ -1,0 +1,30 @@
+<h2 style="padding-left: 20px">List of Heroes</h2>
+
+<div style="padding-left: 100px">
+  <input #searchBar><button (click)="search(searchBar.value); searchBar.value=''" style="margin-left: 2.5em">Search</button>
+  <nav style="margin-top: 20px; margin-bottom: 20px;">
+    <table style="width:60%; max-width: 400px;">
+      <thead>
+        <tr>
+          <th (click)="updateSort('rank')">Rank</th>
+          <th (click)="updateSort('alias')">Hero Name</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let hero of heroes" routerLink="/detail/{{hero.reference}}" (click)="select(hero)" style="cursor: pointer;">
+          <td *ngIf="hero.rank != unranked(); else elseBlock">{{hero.rank}}</td>
+          <td>{{hero.alias}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </nav>
+  <div  style="padding-left: 30px">
+    <button (click)="pageDown()">&lt;</button>
+    Page: {{this.getPage()}}
+    <button (click)="pageUp()">&gt;</button>
+
+    <button routerLink="/addHero" style="margin-left: 2.5em">Add hero</button>
+  </div>
+</div>
+
+<ng-template #elseBlock><td style="padding-left: 10px">N/A</td></ng-template>
