@@ -27,7 +27,7 @@ export class ESHeroService {
   private metaIndex: String = "heroesmeta"      // The index in which hero DB meta data is stored
 
   
-  private DBURL = 'es-svc'        // The URL of the Elastic DB (DEFAULT: Local)
+  private DBURL = 'https://es-svc'        // The URL of the Elastic DB (DEFAULT: Local)
   private DBPORT = '9200'
   // private uname: String = "elastic"
   // private pword: String = "q5s8xcrv7pg5znh9jq7jptkb"
