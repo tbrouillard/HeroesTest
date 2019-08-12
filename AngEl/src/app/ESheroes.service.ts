@@ -92,7 +92,7 @@ export class ESHeroService {
       host: {
         host: this.DBURL,
         port: this.DBPORT,
-        protocol: "https"
+        // protocol: "https"
         // headers: {
         //   'Access-Control-Allow-Origin': "*"
         // }
